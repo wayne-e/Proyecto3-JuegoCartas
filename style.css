@@ -1,0 +1,336 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fondo2.jpg");
+}
+
+header>section, main, main>*, #divHands>*, footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+header>section {
+    width: 33%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    color: black;
+    font-size: 23px;
+}
+
+#games {
+    display: flex;
+    background-color: rgb(201, 198, 198);
+    text-shadow: -1px -1px 1px white;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 5px;
+    justify-content: center;
+    border: solid 1px black;
+    padding-left: 20px;
+}
+
+#logo {
+    position: absolute;
+    height: 150px;
+    width: auto;
+}
+
+/*Main*/
+
+main {
+    flex-wrap: nowrap;
+}
+
+#divHands {
+    width: 90%;
+    margin: 0px 30px;
+}
+
+.sectionHands {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px #333333;
+    border-radius: 8px;
+}
+
+#sectionUserHand {
+    border: solid 3px #0f0e0e;
+}
+
+.articleHandHeader {
+    background-color: rgb(201, 198, 198);
+    margin-bottom: 5px;
+    padding: 0px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    text-shadow: -1px -1px 1px white;
+    font-size: 18px;
+    border: solid 1px black;
+    border-radius: 30px;
+}
+
+.articleHand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+/*Cards*/
+
+figure {
+    height: 150px;
+    width: 100px;
+    position: relative;
+    margin: 5px;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(700px) rotateY(0deg);
+}
+
+.figureReverse {
+    transform: perspective(700px) rotateY(180deg);
+}
+
+.back, .front {
+    height: 150px;
+    width: 100px;
+    border: solid 2px #333333;
+    border-radius: 10px;
+}
+
+.front {
+    display: block;
+}
+
+.back {
+    position: absolute;
+    transform: perspective(700px) rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+/*Deck*/
+
+#sectionDeck {
+    width: 30%;
+    height: 400px;
+    margin: 30px;
+}
+
+#articleDeck {
+    width: 90%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deckBtn {
+    cursor: pointer;
+    width: 90%;
+    height: 50px;
+    color: wheat;
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 2px rgb(112, 125, 143);
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.deckBtn:enabled:hover {
+    background-color: rgb(53, 120, 143);
+}
+
+.deckBtn:disabled {
+    opacity: 0.4;
+}
+
+.deckFigure {
+    height: 150px;
+    width: 100px;
+    background-color: white;
+    border-left: solid 1px #333333;
+    border-radius: 10px;
+    margin: 2px;
+    background-image: url("img/back1.jpg");
+    background-size: cover;
+}
+
+/*Modal*/
+
+.modalSection {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visibleElement {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blackBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modalArticle {
+    position: relative;
+    width: 50%;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    background-image: url("img/fondoModal4.jpg");
+    background-size: cover;
+    margin: 5% auto;
+    transition: all 3s ease-in-out;
+    text-align: center;
+}
+
+#descriptionHeader, #winnerTitle {
+    width: 100%;
+    transition: inherit;
+    margin: 5px;
+    text-shadow: -1px -1px 1px white;
+}
+
+#descriptionHeader {
+    font-size: 30px;
+}
+
+#winnerTitle {
+    font-size: 60px;
+}
+
+#totalPoints {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#totalPoints>div {
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+#totalPoints>div>input, #currentScore {
+    width: 150px;
+    text-align: center;
+    border: solid 1px rgb(116, 114, 114);
+    border-radius: 30px;
+    background-color: whitesmoke;
+    font-size: 20px;
+}
+
+#help {
+    margin: 1% auto;
+    text-shadow: -1px -1px 1px white;
+}
+
+
+#introSection, #aceSection, #winnerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winnerArticle{
+    margin: 0px;
+    position: fixed;
+}
+
+#aceArticle {
+    position: fixed;
+    width: 30%;
+    margin: 0px;
+}
+
+#introblackBg {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#introImg {
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+    width: 60%;
+    height: auto;
+}
+
+/*footer*/
+
+footer {
+    background: rgba(0, 0, 0, 0.4);
+    height: 60px;
+    text-shadow: -1px -1px 1px white;
+}
+
+/*@Medias*/
+
+@media (max-width: 1100px) {
+    #divHands {
+        width: 70%;
+    }
+    .modalArticle {
+        width: 70%;
+    }
+    #aceArticle {
+        width: 40%;
+    }
+    #introImg {
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-wrap: wrap;
+    }
+    #divHands {
+        width: 100%;
+    }
+    #sectionDeck {
+        width: 80%;
+    }
+    .modalArticle {
+        width: 80%;
+    }
+    #aceArticle {
+        width: 50%;
+    }
+    #introImg {
+        width: 80%;
+    }
+}

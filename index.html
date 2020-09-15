@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 Game Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section id="sectionTitle"><img id="logo" src="img/officialLogo.png" alt="31CardGame"></section>
+        <section id="gamesWonSection"><span id="games">Juegos ganados: 0</span></section>
+        <section id="sectionButtons">
+            <button id="btnNewGame" class="deckBtn" type="button">Nuevo Juego</button>
+            <button id="btnHelp" class="deckBtn" type="button">Ayuda</button>
+        </section>
+    </header>
+
+    <main>
+        <div id="divHands">
+            <section id="sectionUserHand" class="sectionHands">
+                <article class="articleHandHeader">
+                    <div class="articleElement">Jugador 1</div>
+                    <div id="userPoints" class="articleElement">Total Points: X</div>
+                </article>
+                <article id="userHand" class="articleHand">
+
+                </article>
+            </section>
+            <section id="sectionPCHand" class="sectionHands">
+                <article class="articleHandHeader">
+                    <div class="articleElement">PC</div>
+                    <div id="pcPoints" class="articleElement">Total Points: ?</div>
+                </article>
+                <article id="pcHand" class="articleHand">
+
+                </article>
+            </section>
+        </div>
+        <section id="sectionDeck">
+            <button id="btnFish" class="deckBtn" type="button">Pedir Carta</button>
+            <article id="articleDeck">
+                <figure class="deckFigure ">
+                    <figure class="deckFigure ">
+                        <figure class="deckFigure ">
+                            <figure class="deckFigure ">
+                                <figure class="deckFigure ">
+                                    <figure class="deckFigure ">
+
+                                    </figure>
+                                </figure>
+                            </figure>
+                        </figure>
+                    </figure>
+                </figure>
+            </article>
+            <button id="btnStay" class="deckBtn" type="button">Quedarse</button>
+        </section>
+    </main>
+
+    <!--Modal Elements-->
+    <section id="introSection" class="modalSection">
+        <div id="introblackBg" class="blackBackground"></div>
+        <img id="introImg" class="modalArticle" src="img/newGame.jpg" alt="31CardGame">
+    </section>
+
+    <section id="winnerSection" class="modalSection">
+        <div class="blackBackground"></div>
+        <article id="winnerArticle" class="modalArticle">
+            <h4 id="descriptionHeader"></h4>
+            <h2 id="winnerTitle"></h2>
+            <div id="totalPoints">
+                <div>
+                    <label for="inputUserPoints"><b>Tus Puntos:</b></label><br>
+                    <input type="text" id="inputUserPoints" disabled />
+                </div>
+                <div>
+                    <label for="inputPCPoints"><b>Puntos PC:</b></label><br>
+                    <input type="text" id="inputPCPoints" disabled />
+                </div>
+            </div>
+            <button id="newGameModalBtn" type="button" class="deckBtn">Nuevo Juego</button>
+        </article>
+    </section>
+
+    <section id="helpSection" class="modalSection">
+        <div class="blackBackground"></div>
+        <article id="help" class="modalArticle">
+            <h2>¡31CardGame&copy!</h2>
+            <p>31CardGame&copy es un juego sencillo en el que el objetivo es conseguir 31 puntos para ganar</p>
+            <p>Al iniciar un <b>Nuevo Juego</b> se reparten 3 cartas y se suman sus valores.
+                Si un jugador rebasa los 31 puntos automáticamente <b>Pierde</b>.
+                Si un jugador alcanza 31 puntos ¡<b>Gana</b> automáticamente!</p>
+            <p>Las cartas numéricas valen puntos <b>Según su número</b>. Las cartas de Jack, Reina y Rey valen <b>10
+                    Puntos</b>.
+                Cuando obtengas un As deberás decidir darle valor de <b>1 u 11 Puntos</b>. ¡Elige bien su valor según te
+                convenga!</p>
+            <p>Si luego de repartir cartas tienes menos de 31 puntos, puedes pescar una carta con el botón <b>Pedir
+                    Carta</b>.
+                Cada vez que pides una carta se ajustarán tus puntos ¡Piensa bien antes de pedir otra carta o podrías
+                perder!</p>
+            <p>Si decides no tomar más cartas, presiona el botón <b>Quedarse</b> para finalizar tu turno.</p>
+            <p>Luego que la PC haga su jugada, se mostrará quién es el ganador en base a Mayoría de Puntos</p>
+            <h4>¡Diviértete con 31CardGame&copy!</h4>
+            <button id="backBtn" type="button" class="deckBtn">Volver al Juego</button>
+        </article>
+    </section>
+
+    <section id="aceSection" class="modalSection">
+        <div class="blackBackground"></div>
+        <article id="aceArticle" class="modalArticle">
+            <h2>Tienes un As</h2>
+            <h4>Elige su Valor</h4>
+            <label for="currentScore">Puntuación Actual:</label><br>
+            <input id="currentScore" type="text" disabled />
+            <div>
+                <button id="aceBtn1" class="deckBtn" type="button">1 Punto</button>
+                <button id="aceBtn11" class="deckBtn" type="button">11 Puntos</button>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        31CardGame&copy byWayne
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
